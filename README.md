@@ -7,4 +7,4 @@ This project was created to illustrate the creation and publishing of a NuGet Pa
 Documentation:
 
 1. [Basic NuGet publishing to a NuGet.org repository](basic-nuget.md)
-2. [Private host a NuGet package](nuget-host.md) 
+2. [Private host a NuGet package](host-nuget.md) 
