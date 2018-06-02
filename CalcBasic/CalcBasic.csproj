@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>CalcBasic</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Alexandre Santiago da Silva</Authors>
+    <Company>lambda-class.com</Company>
+    <Title>Basic math library</Title>
+    <Description>A basic math library created to ilustrate the use of Nuget Packages. It implements the four basic math operations on integers.</Description>
+    <License>Licensed under MIT License</License>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
