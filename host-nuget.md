@@ -1,10 +1,3 @@
----
-title: "Host Nuget"
-date: 2018-06-01T16:51:19-07:00
-tags: [integration, .NET, NuGet]
-draft: true
----
-
 # How to host your own NuGet Packages
 
 There are mainly three different ways you can host your nuget packages privately:
@@ -20,15 +13,15 @@ I tried the NuGet Gallery and the VSTS Package Management.
 
 ## 1. Nuget Gallery
 
-The use of Nuget Gallery is pretty straight forward.
+The use of Nuget Gallery is pretty straightforward.
 
 1. Clone the git repo
 2. Build the application
-3. Publish the website in the web server
+3. Publish the website on the web server
 
 The complete documentation can be found in the [NuGet Gallery](https://github.com/NuGet/NuGetGallery#nuget-gallery--where-packages-are-found) GitHub repository.
 
-This solution is good because it gives a lot more flexibility when it comes to managing your packages. But I reach the conclusion that it takes more time to setup and at the end you have an entire new server or website added for you to manage and worry about. That is why I decided to go for the Microsoft VSTS solution instead.
+This solution is good because it gives a lot more flexibility when it comes to managing your packages. But I concluded that it takes more time to setup, and at the end, you have an entirely new server or website added for you to manage. That is why I decided to go for the Microsoft VSTS solution instead.
 
 ## 2. Microsoft Visual Studio Team Services Package Management
 
@@ -43,8 +36,28 @@ A feed is a container for packages. You consume and publish packages through a p
 ### Steps to publish a package:
 
 1. Navigate to your feed
-2. Select connect to feed
-3.
+2. Select the option Connect to feed
+3. Download the Nuget + VSTS Credential Provider and unpack the files
+4. Open a command prompt in the folder where the NuGet and the Credential Provider were unpacked
+5. Copy and execute in the prompt the command to add the NuGet source for the package
+```Bash
+nuget.exe sources Add -Name "CalcBasic" -Source "https://alexandressilva.pkgs.visualstudio.com/_packaging/CalcBasic/nuget/v3/index.json"
+```
+6. Copy and execute in the prompt the command to push the package to the feed
+```Bash
+nuget.exe push -Source "CalcBasic" -ApiKey VSTS my_package.nupkg
+```
+**Don't forget to replace `my_package.nupkg` with the path and name of your nuget package**
+
+## Consume NuGet packages from a feed in Visual Studio
+
+1. Navigate to your feed
+2. Connect to the feed
+3. Copy the NuGet package source URL
+4. Inside Visual Studio, add the URL to the Package Sources in the NuGet Package Manager
+5. In the Solution Explorer, right-click in your project and select Manage NuGet Packages
+6. In the right corner, choose your source from the Package Source combo box then search for the package you want to use
+7. Select the package, click Install and you are good to go
 
 # References
 
@@ -53,4 +66,5 @@ A feed is a container for packages. You consume and publish packages through a p
 - [nuget.org](http://nuget.org/) Date Accessed: 2018-06-01
 - [NuGet Documentation](https://docs.microsoft.com/en-us/nuget/) Date Accessed: 2018-06-01
 - [Publish a NuGet package from the command line](https://www.visualstudio.com/docs/package/nuget/publish) Date Accessed: 2018-06-02
+- [Consume NuGet packages in Visual Studio](https://docs.microsoft.com/en-ca/vsts/package/nuget/consume)
 
