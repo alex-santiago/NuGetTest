@@ -43,7 +43,7 @@ The PackageId must be unique across nuget.org or whatever host you're using for 
 
 ## 2. Run the pack command to build a NuGet package
 
-From the .NET CLI run the dotnet pack command, which also builds the project automatically to build a NuGet package `[.nupkg]`.
+From the .NET CLI run the dotnet pack command, which also builds the project automatically to create a NuGet package `[.nupkg]`.
 
 ```bash
 dotnet pack
@@ -54,7 +54,7 @@ dotnet pack
 First before publishing you need to acquire an API key from nuget.org. To acquire the key follow these steps:
 
 1. Sign into your nuget.org account
-2. On the upper right, select your user name then select API Keys
+2. On the upper right, select your username then select API Keys
 3. Select Create, provide a name for your key, select Select Scopes > Push. Under API Key, enter * for Glob pattern, then select Create.
 4. After the key is created, select Copy to retrieve the access key. You will need it in the CLI to publish the package.
 5. **Important:** Save your key in a secure location because you cannot copy the key again later on. If you return to the API key page, you need to regenerate the key to copy it. You can also remove the API key if you no longer want to push packages via the CLI.
