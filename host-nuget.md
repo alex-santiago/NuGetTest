@@ -40,14 +40,18 @@ A feed is a container for packages. You consume and publish packages through a p
 3. Download the Nuget + VSTS Credential Provider and unpack the files
 4. Open a command prompt in the folder where the NuGet and the Credential Provider were unpacked
 5. Copy and execute in the prompt the command to add the NuGet source for the package
+
 ```Bash
 nuget.exe sources Add -Name "CalcBasic" -Source "https://alexandressilva.pkgs.visualstudio.com/_packaging/CalcBasic/nuget/v3/index.json"
 ```
 6. Copy and execute in the prompt the command to push the package to the feed
+
 ```Bash
 nuget.exe push -Source "CalcBasic" -ApiKey VSTS my_package.nupkg
 ```
-**Don't forget to replace `my_package.nupkg` with the path and name of your nuget package**
+**1. Don't forget to replace `my_package.nupkg` with the path and name of your nuget package**
+
+**2. The commands are for windows, if you are in a Mac you have to loose the .exe extension and run the command from the path in which NuGet is installed. Usually, `/Library/Frameworks/Mono.framework/Versions/Current/Commands/nuget`**
 
 ## Consume NuGet packages from a feed in Visual Studio
 
@@ -67,4 +71,4 @@ nuget.exe push -Source "CalcBasic" -ApiKey VSTS my_package.nupkg
 - [NuGet Documentation](https://docs.microsoft.com/en-us/nuget/) Date Accessed: 2018-06-01
 - [Publish a NuGet package from the command line](https://www.visualstudio.com/docs/package/nuget/publish) Date Accessed: 2018-06-02
 - [Consume NuGet packages in Visual Studio](https://docs.microsoft.com/en-ca/vsts/package/nuget/consume)
-
+- [Authenticate access with personal access tokens for VSTS and TFS](https://docs.microsoft.com/en-ca/vsts/accounts/use-personal-access-tokens-to-authenticate?view=vsts)
