@@ -31,7 +31,7 @@ Microsoft recommends developers target .NET Standard, which all .NET and .NET Co
 Open the class library project. Edit the `[.csproj]` file and add the following minimal properties inside the exiting `<PropertyGroup>` tag, changing the values as appropriate:
 
 ```xml
-<PackageId>AppLogger</PackageId>
+<PackageId>CalcBasic</PackageId>
 <Version>1.0.0</Version>
 <Authors>your_name</Authors>
 <Company>your_company</Company>
