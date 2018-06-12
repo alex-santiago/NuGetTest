@@ -1,9 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>CalcBasic</PackageId>
-    <Version>1.0.1</Version>
+    <!-- <Version>1.0.1</Version> -->
     <Authors>Alexandre Santiago da Silva</Authors>
     <Company>lambda-class.com</Company>
     <Title>Basic math library</Title>
