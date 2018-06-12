@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>CalcBasic</PackageId>
     <!-- <Version>1.0.1</Version> -->
