@@ -72,4 +72,3 @@ nuget.exe push -Source "CalcBasic" -ApiKey VSTS my_package.nupkg
 - [Publish a NuGet package from the command line](https://www.visualstudio.com/docs/package/nuget/publish) Date Accessed: 2018-06-02
 - [Consume NuGet packages in Visual Studio](https://docs.microsoft.com/en-ca/vsts/package/nuget/consume)
 - [Authenticate access with personal access tokens for VSTS and TFS](https://docs.microsoft.com/en-ca/vsts/accounts/use-personal-access-tokens-to-authenticate?view=vsts)
-
